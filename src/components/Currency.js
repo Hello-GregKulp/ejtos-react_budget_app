@@ -9,7 +9,7 @@ const Currency = () => {
     const newCurrency = event.target.value;
     setSelectedCurrency(newCurrency);
     dispatch({
-        type: 'CHANGE_CURRENCY',
+        type: 'CHG_CURRENCY',
         payload: newCurrency,
       });
   }
@@ -30,16 +30,16 @@ return (<div
       onChange={handleCurrencyChange}
     >
       <option defaultValue>Choose Currency...</option>
-      <option value="Dollar $ " name="dollar">
+      <option value="$ " name="dollar">
         Dollar $
       </option>
-      <option value="Pounds £ " name="pounds">
+      <option value="£ " name="pounds">
         Pounds £
       </option>
-      <option value="Euro € " name="euro">
+      <option value="€ " name="euro">
         Euro €
       </option>
-      <option value="Ruppee ₹ " name="ruppee">
+      <option value="₹ " name="ruppee">
         Ruppee ₹
       </option>
     </select>
